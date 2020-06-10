@@ -1,5 +1,10 @@
 trigger:
-- '*'
+  branches:
+    include:
+    - build-pipeline
+  paths:
+    include:
+    - /README.md
 
 pool:
   vmImage: 'ubuntu-16.04'
