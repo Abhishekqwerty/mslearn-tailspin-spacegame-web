@@ -1,5 +1,10 @@
 trigger:
-- '*'
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - Tailspin.SpaceGame.Web
 
 pool:
   vmImage: 'ubuntu-16.04'
