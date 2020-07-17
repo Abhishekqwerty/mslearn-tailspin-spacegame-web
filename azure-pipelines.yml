@@ -76,8 +76,6 @@ stages:
   jobs:
   - deployment: test
     displayName: Test Job
-    pool:
-      vmImage: 'ubuntu-16.04'
     environment: Production
     strategy:
      runOnce:
