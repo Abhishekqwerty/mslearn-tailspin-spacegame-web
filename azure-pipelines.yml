@@ -79,13 +79,9 @@ stages:
     pool:
       vmImage: 'ubuntu-16.04'
     environment: Production
-    steps:
-    #- task: Npm@1
-    #  displayName: 'npm test'
-    #  inputs:
-    #    command: custom
-    #    workingDir: SpendkeyAngular
-    #    verbose: false
-    #    customCommand: test
-    - script: 'echo "Testing needs to be implemented"'
-      displayName: 'Command Line Script'
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+           - script: 'echo "Testing needs to be implemented"'
+             displayName: 'Command Line Script'
