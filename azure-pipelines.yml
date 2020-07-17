@@ -85,6 +85,6 @@ stages:
        deploy:
          steps:
            - script: |
-               'echo "Testing needs to be implemented"'
-               'ls -la'
+               echo "Testing needs to be implemented"
+               ls -la
              displayName: 'Command Line Script'
