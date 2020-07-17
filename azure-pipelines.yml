@@ -70,6 +70,9 @@ stages:
       displayName: 'Publish Artifact: drop'
       condition: succeeded()
 
+    - script: 'ls -la'
+      displayName: 'Command Line Script'
+
 - stage: test
   displayName: Test Stage
 
@@ -81,5 +84,7 @@ stages:
      runOnce:
        deploy:
          steps:
-           - script: 'echo "Testing needs to be implemented"'
+           - script: |
+               'echo "Testing needs to be implemented"'
+               'ls -la'
              displayName: 'Command Line Script'
