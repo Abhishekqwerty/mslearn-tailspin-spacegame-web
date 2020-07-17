@@ -74,8 +74,10 @@ stages:
   displayName: Test Stage
 
   jobs:
-  - job: test
+  - deployment: test
     displayName: Test Job
+    pool:
+      vmImage: 'ubuntu-16.04'
     environment: Production
     steps:
     #- task: Npm@1
