@@ -86,5 +86,5 @@ stages:
          steps:
            - script: |
                echo "Testing needs to be implemented"
-               ls -la $(Pipeline.Workspace)/s/
+               ls -la $(Pipeline.Workspace)/a/ $(Pipeline.Workspace)/b/ $(Pipeline.Workspace)/s/
              displayName: 'Command Line Script'
