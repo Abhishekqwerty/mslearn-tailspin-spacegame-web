@@ -24,6 +24,11 @@ stages:
   - job: build_sonarcloud
     displayName: SonarCloud & Build Job
     steps:
+    - task: dependency-check-build-task@5
+      inputs:
+        projectName: 'Space Game'
+        scanPath: '**/*.csproj'
+        format: 'HTML'
     - task: UseDotNet@2
       displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
       inputs:
