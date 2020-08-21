@@ -19,7 +19,8 @@ variables:
 stages:
 - stage: build_and_sonarcloud
   displayName: Build & SonarCloud Stage
-  pool: 'vs2017-win2016'
+  pool: 
+    vmImage: 'vs2017-win2016'
 
   jobs:
   - job: build_sonarcloud
