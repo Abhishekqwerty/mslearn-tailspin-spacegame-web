@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: ''
   demands:
     - npm
 
@@ -56,13 +56,6 @@ steps:
 
 - task: WhiteSource Bolt@20
   displayName: 'Run WhiteSource Bolt'
-
-- task: dependency-check-build-task@5
-  inputs:
-    projectName: 'mslearn-tailspin-spacegame-web'
-    scanPath: '**/package.json'
-    format: 'HTML, JUNIT'
-    enableVerbose: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
